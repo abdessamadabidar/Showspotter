@@ -1,0 +1,20 @@
+
+export const categories : string[] = [
+	"Action",
+	"Adventure",
+	"Animation",
+	"Comedy",
+	"Crime",
+	"Documentary",
+	"Drama",
+	"Family",
+	"Fantasy",
+	"Horror",
+	"Musical",
+	"Mystery",
+	"Romance",
+	"Science Fiction",
+	"Thriller",
+	"War",
+	"Western",
+]
