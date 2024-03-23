@@ -52,7 +52,7 @@ export default function ChangePasswordModal() {
 									size="sm"
 									variant="faded"
 									endContent={
-										<button className="focus:outline-none " type="button" onClick={toggleNewPasswordVisibility}>
+										<button className="focus:outline-none relative -top-2" type="button" onClick={toggleNewPasswordVisibility}>
 											{newPasswordIsVisible ? (eyeIcon()) : (eyeClosedIcon())}
 										</button>
 									}
@@ -65,7 +65,7 @@ export default function ChangePasswordModal() {
 									size="sm"
 									variant="faded"
 									endContent={
-										<button className="focus:outline-none " type="button" onClick={toggleConfirmNewPasswordVisibility}>
+										<button className="focus:outline-none relative -top-2" type="button" onClick={toggleConfirmNewPasswordVisibility}>
 											{confirmNewPasswordIsVisible ? (eyeIcon()) : (eyeClosedIcon())}
 										</button>
 									}

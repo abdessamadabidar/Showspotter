@@ -6,7 +6,7 @@ interface ApplicationLoadingSlice {
 }
 
 const initialState : ApplicationLoadingSlice = {
-	isLoading: true,
+	isLoading: false,
 }
 
 const applicationLoadingSlice = createSlice({

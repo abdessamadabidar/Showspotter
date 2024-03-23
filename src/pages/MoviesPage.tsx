@@ -1,21 +1,29 @@
 import {BreadcrumbItem, Breadcrumbs, Card, CardFooter, Chip, Image, Pagination} from "@nextui-org/react";
 import {movies} from "../custom/data/movies.ts";
 import NavbarRender from "../layouts/NavbarRender.tsx";
+import {useSelector} from "react-redux";
+import {RootState} from "../state/store.ts";
+import LoadingProgress from "../custom/ui/LoadingProgress.tsx";
 
 
 
 export default function MoviesPage() : JSX.Element {
 
+	const  appIsLoading: boolean = useSelector((state: RootState) => state.applicationLoading.isLoading);
+
+	if (appIsLoading) {
+		return (
+			<LoadingProgress />
+		);
+	}
 
 	return (
 
 		<>
-			<div className="absolute top-0 w-full">
-				<NavbarRender/>
-			</div>
-			<section className={"w-screen pt-24"}>
-				<div className={"w-full px-5 xl:w-[85%] 2xl:w-[75%] mx-auto "}>
-					<div className={"mb-16"}>
+			<NavbarRender/>
+			<section>
+				<div className={"w-full px-5 xl:w-[85%] 2xl:w-[75%] mx-auto mb-5"}>
+					<div className={"my-16"}>
 						<Breadcrumbs radius={"full"} size={"sm"} variant="solid" underline={"active"} classNames={{
 							list: "bg-transparent px-5 border-0.1"
 						}} itemClasses={{

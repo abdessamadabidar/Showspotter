@@ -60,7 +60,7 @@ export default function MoviePage() : JSX.Element {
 	return (
 		<>
 			<NavbarRender />
-			<section className="w-screen min-h-screen pt-6">
+			<section className="pt-6">
 				<div className="min-h-screen px-5 md:px-60">
 					<div className={"mb-6"}>
 						<Breadcrumbs  radius={"full"} size={"sm"} variant="solid" underline={"active"} classNames={{

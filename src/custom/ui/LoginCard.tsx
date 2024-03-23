@@ -47,7 +47,7 @@ export function LoginCard() : JSX.Element {
 						size="sm"
 						variant="faded"
 						endContent={
-							<button className="focus:outline-none " type="button" onClick={toggleVisibility}>
+							<button className="focus:outline-none relative -top-2" type="button" onClick={toggleVisibility}>
 								{isVisible ? (eyeIcon()) : (eyeClosedIcon())}
 							</button>
 						}

@@ -2,6 +2,7 @@ import {Button, Modal, ModalBody, ModalContent, ModalFooter, ModalHeader} from "
 import {useDispatch, useSelector} from "react-redux";
 import {RootState} from "../../state/store.ts";
 import {toggleOpening} from "../../state/modal/confirmationModalSlice.ts";
+import WarningTriangleSolidIcon from "./icons/warning-triangle-solid-icon.tsx";
 
 
 interface Props {
@@ -32,9 +33,12 @@ export default function ConfirmationModal({title, message}: Props) : JSX.Element
 			>
 				<ModalContent>
 					<>
-						<ModalHeader className="flex flex-col gap-1 text-red-500">{title}</ModalHeader>
+						<ModalHeader className="flex flex-nowrap gap-2 text-red-500  items-center">
+							<WarningTriangleSolidIcon width={16} height={16} color={"#ef4444"} />
+							{title}
+						</ModalHeader>
 						<ModalBody>
-							<p className="italic">
+							<p className="italic font-open-sans">
 								{message}
 							</p>
 						</ModalBody>

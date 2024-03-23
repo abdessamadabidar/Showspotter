@@ -5,6 +5,8 @@ import CheckCircleIcon from "../custom/ui/icons/check-circle-icon.tsx";
 import HeartIcon from "../custom/ui/icons/heart-icon.tsx";
 import {movies} from "../custom/data/movies.ts";
 import ProfileSidebar from "../custom/ui/ProfileSidebar.tsx";
+import ConfirmationModal from "../custom/ui/ConfirmationModal.tsx";
+import ChangePasswordModal from "../custom/ui/ChangePasswordModal.tsx";
 
 export default function ListsPage() : JSX.Element {
 
@@ -12,12 +14,12 @@ export default function ListsPage() : JSX.Element {
 
 	return (
 		<>
-			<div className={"absolute top-0 w-full"}>
-				<NavbarRender/>
-			</div>
-			<section className={"min-h-screen w-screen pt-24 lg:pt-32"}>
-				<div className="flex items-start justify-center lg:gap-x-14 px-14">
-					<ProfileSidebar />
+			<NavbarRender/>
+			<section>
+				<div className="flex items-start justify-center lg:gap-x-14 px-2 md:px-5 lg:px-14 mt-10">
+					<div className="hidden w-1/3 lg:block min-h-full">
+						<ProfileSidebar />
+					</div>
 					<div className="flex w-full flex-col">
 						<Tabs
 							aria-label="Options"
@@ -41,8 +43,8 @@ export default function ListsPage() : JSX.Element {
 								}
 
 							>
-								<div className="p-5">
-									<div className="gap-2 flex flex-wrap">
+								<div className="lg:p-5">
+									<div className="gap-2 grid grid-cols-3 md:grid-cols-4 lg:grid-cols-3 xl:grid-cols-6 ">
 										{movies.map((link: string, index: number) => (
 												<Card
 													className="sm:w-[115px] sm:h-[171px] md:w-[178px] md:h-[267px] lg:w-[314px] lg:h-[475px] xl:w-[150px] xl:h-[225px]"
@@ -87,8 +89,8 @@ export default function ListsPage() : JSX.Element {
 									</div>
 								}
 							>
-								<div className="p-5">
-									<div className="gap-2 flex flex-wrap">
+								<div className="lg:p-5">
+									<div className="gap-2 grid grid-cols-3 md:grid-cols-4 lg:grid-cols-3 xl:grid-cols-6">
 										{movies.map((link: string, index: number) => (
 												<Card
 													className="sm:w-[115px] sm:h-[171px] md:w-[178px] md:h-[267px] lg:w-[314px] lg:h-[475px] xl:w-[150px] xl:h-[225px]"
@@ -133,8 +135,8 @@ export default function ListsPage() : JSX.Element {
 									</div>
 								}
 							>
-								<div className="p-5">
-									<div className="gap-2 flex flex-wrap">
+								<div className="lg:p-5">
+									<div className="gap-2 grid grid-cols-3 md:grid-cols-4 lg:grid-cols-3 xl:grid-cols-6">
 										{movies.map((link: string, index: number) => (
 												<Card
 													className="sm:w-[115px] sm:h-[171px] md:w-[178px] md:h-[267px] lg:w-[314px] lg:h-[475px] xl:w-[150px] xl:h-[225px]"
@@ -173,6 +175,8 @@ export default function ListsPage() : JSX.Element {
 					</div>
 				</div>
 			</section>
+			<ConfirmationModal title={"Delete account"} message={'Are you sure you want to delete your account?'} />
+			<ChangePasswordModal />
 		</>
 
 	);

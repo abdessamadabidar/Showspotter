@@ -44,11 +44,9 @@ export default function ProfilePage() {
 
 	return (
 		<>
-			<div className={"absolute top-0 w-full"}>
-				<NavbarRender/>
-			</div>
-			<section className={"w-screen px-4 pt-24 lg:px-14"}>
-				<div className="w-full flex flex-col gap-y-8 tracking-wider">
+			<NavbarRender/>
+			<section>
+				<div className="w-full flex flex-col gap-y-8 tracking-wider mt-10 lg:gap-x-14 px-14">
 					{/* content for Mobile only */}
 					<div className="flex items-center justify-between md:hidden">
 						<h2 className="text-2xl font-semibold mb-3">Profile</h2>
@@ -111,12 +109,14 @@ export default function ProfilePage() {
 						</div>
 					</div>
 
-					<div className="flex items-start justify-center lg:gap-x-14">
-						<ProfileSidebar />
+					<div className="h-full flex items-start justify-center lg:gap-x-14 ">
+						<div className="hidden w-1/3 md:block min-h-full">
+							<ProfileSidebar />
+						</div>
 						<div className={"w-full md:px-14"}>
 							<div className="self-center">
 								<div className="size-40 rounded-full bg-gray-800 border-2 border-smooth-gray">
-									<img src={"https://i.pravatar.cc/171?u=a04288114e27926702d"} className={"w-full h-full object-cover rounded-full"} alt={""}/>
+									<img src={"src/assets/avatars/9434619.jpg"} className={"w-full h-full object-cover rounded-full"} alt={""}/>
 								</div>
 
 								<button
@@ -146,7 +146,7 @@ export default function ProfilePage() {
 					</div>
 				</div>
 			</section>
-			<ConfirmationModal title={"Delete account"} message={'Are you sure you want to delete this item?'} />
+			<ConfirmationModal title={"Delete account"} message={'Are you sure you want to delete your account?'} />
 			<ChangePasswordModal />
 			<SelectAvatarModal />
 		</>
