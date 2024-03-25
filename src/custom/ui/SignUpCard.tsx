@@ -33,8 +33,25 @@ export default function SignUpCard() : JSX.Element {
 		popoverContent: ["bg-gray-800 text-smooth-gray"]
 	}
 
+	const computePasswordStrength = (password: string) => {
+		let strengthIndicator = -1;
 
+		if (/[a-z]/.test(password)) strengthIndicator++;
+		if (/[A-Z]/.test(password)) strengthIndicator++;
+		if (/\d/.test(password)) strengthIndicator++;
+		if (/[^a-zA-Z0-9]/.test(password)) strengthIndicator++;
 
+		if (password.length >= 16) strengthIndicator++;
+
+		return passwordStrengthStates[strengthIndicator];
+	};
+
+	const [passwordStrengthState, SetPasswordStrengthState] = useState<string>("");
+	const passwordStrengthStates : string[] = ["weak", "medium", "medium", "strong"];
+	const handlePasswordChange = (e: ChangeEvent<HTMLInputElement>): void => {
+		SetPasswordStrengthState(computePasswordStrength(e.target.value))
+		console.log(passwordStrengthState)
+	}
 
 
 	const handleMonthSelectionChange = (e: ChangeEvent<HTMLSelectElement>) : void => {
@@ -97,19 +114,40 @@ export default function SignUpCard() : JSX.Element {
 						<Input type="text" variant={"faded"} label="Last name" size="sm" classNames={InputCustomStyle}/>
 					</div>
 					<Input type="email" variant={"faded"} label="Email" size="sm" className="mb-4" classNames={InputCustomStyle}/>
-					<Input
-						label="Password"
-						size="sm"
-						variant={"faded"}
-						endContent={
-							<button className="focus:outline-none relative -top-2" type="button" onClick={toggleVisibility}>
-								{isVisible ? (eyeIcon()) : (eyeClosedIcon())}
-							</button>
-						}
-						type={isVisible ? "text" : "password"}
-						className="mb-4"
-						classNames={InputCustomStyle}
-					/>
+					<div className="mb-4">
+						<Input
+							label="Password"
+							size="sm"
+							variant={"faded"}
+							endContent={
+								<button className="focus:outline-none relative -top-2" type="button" onClick={toggleVisibility}>
+									{isVisible ? (eyeIcon()) : (eyeClosedIcon())}
+								</button>
+							}
+							type={isVisible ? "text" : "password"}
+							classNames={InputCustomStyle}
+							className="mb-2"
+							onChange={handlePasswordChange}
+						/>
+						<div className="flex flex-nowrap items-center justify-center gap-x-1 px-1 mb-1">
+							<div className={`flex-1 h-1 rounded-full ${
+									passwordStrengthState === 'weak' ? 'bg-red-500' : 
+										(passwordStrengthState === 'medium' ? 'bg-orange-500' : 
+											(passwordStrengthState === 'strong' ? 'bg-green-500': 'bg-gray-800'))
+							}`} />
+							<div className={`flex-1 h-1 rounded-full ${
+									passwordStrengthState === 'weak' ? 'bg-gray-800' :
+										(passwordStrengthState === 'medium' ? 'bg-orange-500' : 
+											(passwordStrengthState === 'strong' ? 'bg-green-500': 'bg-gray-800'))
+							}`} />
+							<div className={`flex-1 h-1 rounded-full ${
+									passwordStrengthState === 'weak' ? 'bg-gray-800' :
+										(passwordStrengthState === 'medium' ? 'bg-gray-800' :
+											(passwordStrengthState === 'strong' ? 'bg-green-500': 'bg-gray-800'))
+							}`} />
+						</div>
+						<p className="text-xs text-smooth-gray px-1 italic font-sans">{passwordStrengthState}</p>
+					</div>
 					<div className="flex items-center justify-between gap-x-4 mb-4" >
 						<Select
 							label="Year"

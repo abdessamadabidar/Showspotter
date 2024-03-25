@@ -19,6 +19,7 @@ import HomePage from "./pages/HomePage.tsx";
 import ListsPage from "./pages/ListsPage.tsx";
 import ContactPage from "./pages/ContactPage.tsx";
 
+
 const router  = createBrowserRouter([
     {
         path: '/',
@@ -70,6 +71,7 @@ const router  = createBrowserRouter([
         element: <ContactPage />,
         errorElement: <PageNotFound />
     },
+    
 ]);
 
 
