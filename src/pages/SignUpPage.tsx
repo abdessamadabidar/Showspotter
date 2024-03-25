@@ -12,7 +12,7 @@ export default function SignUpPage() : JSX.Element {
 		);
 	}
 	return (
-		<div className="w-screen h-[100vh] grid items-center justify-center" >
+		<div className="grid place-items-center h-screen px-3" >
 			<SignUpCard />
 		</div>
 	);

@@ -1,5 +1,5 @@
-import React, { useCallback } from 'react'
-import { EmblaOptionsType, EmblaCarouselType } from 'embla-carousel'
+import React from 'react'
+import { EmblaOptionsType } from 'embla-carousel'
 import {
 	PrevButton,
 	NextButton,
@@ -20,24 +20,13 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
 	const [emblaRef, emblaApi] = useEmblaCarousel(options, [Autoplay()])
 	const link : string = "https://c4.wallpaperflare.com/wallpaper/462/216/45/movies-dark-wednesday-addams-wednesday-tv-series-movie-poster-hd-wallpaper-preview.jpg";
 
-	const onNavButtonClick = useCallback((emblaApi: EmblaCarouselType) => {
-		const autoplay = emblaApi?.plugins()?.autoplay
-		if (!autoplay) return
-
-		const resetOrStop =
-			autoplay.options.stopOnInteraction === false
-				? autoplay.reset
-				: autoplay.stop
-
-		resetOrStop()
-	}, [])
 
 	const {
 		prevBtnDisabled,
 		nextBtnDisabled,
 		onPrevButtonClick,
 		onNextButtonClick
-	} = usePrevNextButtons(emblaApi, onNavButtonClick)
+	} = usePrevNextButtons(emblaApi)
 
 	return (
 		<section className="max-w-[50rem] min-w-full flex flex-col">

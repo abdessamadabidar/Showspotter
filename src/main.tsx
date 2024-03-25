@@ -18,6 +18,7 @@ import ProfilePage from "./pages/ProfilePage.tsx";
 import HomePage from "./pages/HomePage.tsx";
 import ListsPage from "./pages/ListsPage.tsx";
 import ContactPage from "./pages/ContactPage.tsx";
+import SeriePage from "./pages/SeriePage.tsx";
 
 
 const router  = createBrowserRouter([
@@ -71,7 +72,11 @@ const router  = createBrowserRouter([
         element: <ContactPage />,
         errorElement: <PageNotFound />
     },
-    
+    {
+        path: '/serie',
+        element: <SeriePage />,
+        errorElement: <PageNotFound />
+    },
 ]);
 
 

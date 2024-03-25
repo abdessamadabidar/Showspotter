@@ -1,5 +1,16 @@
 import NavbarRender from "../layouts/NavbarRender.tsx";
-import {BreadcrumbItem, Breadcrumbs, Card, CardFooter, Chip, Image, Pagination, Tooltip, User} from "@nextui-org/react";
+import {
+	BreadcrumbItem,
+	Breadcrumbs,
+	Card,
+	CardFooter,
+	Chip,
+	Image,
+	Pagination, Tab,
+	Tabs,
+	Tooltip,
+	User
+} from "@nextui-org/react";
 import {Link} from "react-router-dom";
 import ClockIcon from "../custom/ui/icons/clock-icon.tsx";
 import CalendarIcon from "../custom/ui/icons/calendar-icon.tsx";
@@ -14,7 +25,7 @@ import Footer from "../layouts/Footer.tsx";
 
 
 
-export default function MoviePage() : JSX.Element {
+export default function SeriePage() : JSX.Element {
 
 	const OPTIONS: EmblaOptionsType = { align: 'start', slidesToScroll: 'auto' }
 	const SLIDE_COUNT = 5
@@ -224,7 +235,24 @@ export default function MoviePage() : JSX.Element {
 							</Tooltip>
 						</div>
 					</div>
-					<div className={"mt-16 flex flex-col"}>
+					<div className="mt-16 ">
+						<Tabs variant="underlined" classNames={{
+							tabList: "relative rounded-none p-0 border-b border-divider",
+							tabContent: "group-data-[selected=true]:text-primary",
+							cursor: "w-full bg-primary",
+						}}>
+							<Tab key="season1" title="Season 1">
+							{/*	TODO - Add episode cards here  */}
+							</Tab>
+							<Tab key="season2" title="Season 2">
+								{/*	TODO - Add episode cards here  */}
+							</Tab>
+							<Tab key="season3" title="Season 3">
+								{/*	TODO - Add episode cards here  */}
+							</Tab>
+						</Tabs>
+					</div>
+					<div className={"mt-16 flex flex-col "}>
 						<div className={"mb-8 flex items-center justify-between"}>
 							<h3 className={"text-2xl text-white/80 font-semibold"}>Reviews</h3>
 							<Tooltip size="sm" content="Add review" classNames={ToolTipStyle}>

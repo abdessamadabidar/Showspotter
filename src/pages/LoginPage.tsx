@@ -11,7 +11,7 @@ export default function LoginPage() {
 			<LoadingProgress />
 		);
 	}
-	return <div className="w-screen h-[100vh] grid items-center justify-center" >
+	return <div className="grid place-items-center h-screen px-3" >
 		<LoginCard />
 	</div>
 }

@@ -70,9 +70,9 @@ export default function SignUpCard() : JSX.Element {
 
 
 	return (
-		<div className="w-full relative">
+		<div className="w-full relative max-w-lg">
 			<div className="absolute  h-full w-full bg-gradient-to-r from-blue-500 to-teal-500 transform scale-[0.80] bg-red-500 rounded-full blur-3xl" />
-			<div className="md:w-[500px] lg:w-[550px] relative shadow-xl bg-gray-900 border border-gray-800  px-4 py-6 h-full overflow-hidden rounded-2xl flex flex-col justify-end items-start">
+			<div className="w-full relative shadow-xl bg-gray-900 border border-gray-800  px-4 py-6 h-full overflow-hidden rounded-2xl flex flex-col justify-end items-start">
 				<div className="h-5 w-5 rounded-full border flex items-center justify-center mb-4 border-gray-500">
 					<svg
 						xmlns="http://www.w3.org/2000/svg"

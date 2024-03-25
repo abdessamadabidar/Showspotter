@@ -109,13 +109,17 @@ export default function HomePage() : JSX.Element {
 							}
 						</motion.div>
 						<div className={"animate-bounce mt-8"}>
-							<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"><path fill="none" stroke="white" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="m12 20l6-6m-6 6l-6-6m6 6V9.5M12 4v2.5"/></svg></div>
+							<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24">
+								<path fill="none" stroke="white" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="m12 20l6-6m-6 6l-6-6m6 6V9.5M12 4v2.5"/>
+							</svg></div>
 					</div>
 				</div>
 				<div className={"h-[80px]"} ref={homeRef}></div>
 				<div className={"w-full px-5 xl:w-[85%] 2xl:w-[75%] mx-auto"}>
 					<div className="w-[95%] md:w-[40%] mx-auto relative border-1 bg-gray-800 border-smooth-gray ps-2 pe-3 flex flex-nowrap items-center rounded-lg mb-10">
-						<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="#9CA3AF"><circle cx="11" cy="11" r="6"/><path strokeLinecap="round" d="m20 20l-3-3"/></g></svg>
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.2} stroke="currentColor" className="w-6 h-6 text-smooth-gray">
+							<path strokeLinecap="round" strokeLinejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+						</svg>
 						<input type="text" name="searchQuery" className={"bg-transparent font-light w-full h-full ms-2 py-[0.75rem] !border-0 outline-0 "} placeholder={"search"} />
 					</div>
 					<div className={"flex flex-col gap-y-16"}>

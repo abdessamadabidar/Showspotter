@@ -41,29 +41,25 @@ export default function MoviesPage() : JSX.Element {
 							<h2 className="font-semibold text-3xl">Movies</h2>
 							<div
 								className=" border-1 bg-gray-800 border-smooth-gray ps-2 pe-3 flex flex-nowrap items-center rounded-lg ">
-								<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24">
-									<g fill="none" stroke="#9CA3AF">
-										<circle cx="11" cy="11" r="6"/>
-										<path strokeLinecap="round" d="m20 20l-3-3"/>
-									</g>
+								<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.2} stroke="currentColor" className="w-6 h-6 text-smooth-gray">
+									<path strokeLinecap="round" strokeLinejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
 								</svg>
 								<input type="text" name="searchQuery"
 								       className={"bg-transparent font-light w-full h-full ms-2 py-[0.5rem] !border-0 outline-0 "}
 								       placeholder={"search"}/>
 							</div>
 						</div>
-						<div className="gap-2 grid grid-cols-3 md:grid-cols-4 lg:grid-cols-3 xl:grid-cols-7 ">
+						<div className="gap-x-2 gap-y-5 grid grid-cols-3 md:grid-cols-4 lg:grid-cols-3 xl:grid-cols-7 ">
 							{movies.map((link: string, index: number) => (
-									<Card
-										className="sm:w-[115px] sm:h-[171px] md:w-[178px] md:h-[267px] lg:w-[314px] lg:h-[475px] xl:w-[150px] xl:h-[225px]"
-										key={index} isPressable>
+								<div>
+									<Card className="bg-gray-800 sm:w-[115px] sm:h-[171px] md:w-[178px] md:h-[267px] lg:w-[314px] lg:h-[475px] xl:w-[150px] xl:h-[225px] hover:scale-105 transition-all duration-500 mb-1.5" key={index} isPressable>
 										<Image
 											removeWrapper
 											alt="Card background"
 											className="z-0 w-full h-full object-cover"
-											src={link}/>
-										<CardFooter
-											className="flex justify-between overflow-hidden py-1 absolute bottom-1 w-[calc(100%_-_8px)] ml-1 z-10">
+											src={link}
+										/>
+										<CardFooter className="flex justify-between overflow-hidden py-1 absolute bottom-1 w-[calc(100%_-_8px)] ml-1 z-10">
 											<Chip
 												className={"bg-gray-700"}
 												variant="shadow"
@@ -75,13 +71,14 @@ export default function MoviesPage() : JSX.Element {
 											>
 												New
 											</Chip>
-											<Chip className="text-tiny text-white bg-black/70 font-medium" variant="flat"
-											      color="default" radius="lg" size="sm">
+											<Chip className="text-tiny text-white bg-black/70 font-medium" variant="flat" color="default" radius="lg" size="sm">
 												2024
 											</Chip>
 
 										</CardFooter>
 									</Card>
+									<p className="text-sm px-1 font-open-sans leading-tight">lorem ipsum harvered map</p>
+								</div>
 								)
 							)}
 						</div>

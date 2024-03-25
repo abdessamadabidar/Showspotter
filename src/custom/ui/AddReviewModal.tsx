@@ -39,7 +39,12 @@ export default function AddReviewModal() {
 
 				<ModalContent>
 					<>
-						<ModalHeader className="flex flex-col gap-1 text-white">Add review</ModalHeader>
+						<ModalHeader className="flex flex-nowrap items-center gap-x-1 text-white">
+							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+								<path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+							</svg>
+							Add review
+						</ModalHeader>
 						<ModalBody className="text-white">
 							<form>
 								<Textarea
@@ -47,7 +52,7 @@ export default function AddReviewModal() {
 									variant="faded"
 									placeholder="Enter your review here"
 									radius={"sm"}
-									disableAutosize
+									minRows={10}
 									classNames={{
 										label: ["text-smooth-gray"],
 										inputWrapper: [
