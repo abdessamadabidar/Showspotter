@@ -22,6 +22,7 @@ import {toggleOpening} from "../state/modal/addReviewModalSlice.ts";
 import EmblaCarousel from "../components/ui/EmblaCarousel.tsx";
 import {EmblaOptionsType} from "embla-carousel";
 import Footer from "../layouts/Footer.tsx";
+import EpisodeCard from "../custom/ui/EpisodeCard.tsx";
 
 
 
@@ -64,7 +65,7 @@ export default function SeriePage() : JSX.Element {
 		<>
 			<NavbarRender />
 			<section className="pt-6">
-				<div className="min-h-screen px-5 md:px-60">
+				<div className="min-h-screen px-4 lg:w-9/12 mx-auto">
 					<div className={"mb-6"}>
 						<Breadcrumbs  radius={"full"} size={"sm"} variant="solid" underline={"active"} classNames={{
 							list: "bg-transparent"
@@ -74,12 +75,12 @@ export default function SeriePage() : JSX.Element {
 						}}
 						>
 							<BreadcrumbItem>Home</BreadcrumbItem>
-							<BreadcrumbItem>Movies</BreadcrumbItem>
+							<BreadcrumbItem>Series</BreadcrumbItem>
 							<BreadcrumbItem>Wednesday</BreadcrumbItem>
 						</Breadcrumbs>
 					</div>
 					<div className={"flex flex-col md:flex-row gap-x-10 mb-5 items-center"}>
-						<Card className="lg:w-[190px] lg:h-[240px] w-[100px] h-[140px] mb-4" key={1}>
+						<Card className="md:w-[190px] md:h-[240px]  w-[100px] h-[140px] mb-4" key={1}>
 							<Image
 								removeWrapper
 								alt="Card background"
@@ -152,7 +153,7 @@ export default function SeriePage() : JSX.Element {
 							</svg>
 
 							<span className={"text-white text-lg font-semibold"}>7.8</span>
-							<span className={"text-xs font-medium self-end"}>by<span className={"text-purple-700 ms-1"}>IMDB</span></span>
+							<span className={"text-xs font-medium self-end"}>by<span className={"text-purple-400 ms-1"}>IMDB</span></span>
 						</div>
 						<div className={"h-1 px-3.5 py-3 flex gap-x-5  justify-center"}>
 							<Tooltip size="sm"  content={isFavorite ? "Remove this movie from your favorite list": "Add this movie to your favorite list"} classNames={ToolTipStyle}>
@@ -179,8 +180,8 @@ export default function SeriePage() : JSX.Element {
 									isOnWatchlist ?
 										(
 											<button onClick={handleAddToWatchlistClick} className={"hover:scale-95 transition-all duration-200"}>
-												<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6 text-primary">
-													<path fillRule="evenodd" d="M6.32 2.577a49.255 49.255 0 0 1 11.36 0c1.497.174 2.57 1.46 2.57 2.93V21a.75.75 0 0 1-1.085.67L12 18.089l-7.165 3.583A.75.75 0 0 1 3.75 21V5.507c0-1.47 1.073-2.756 2.57-2.93Z" clipRule="evenodd" />
+												<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+													<path strokeLinecap="round" strokeLinejoin="round" d="m3 3 1.664 1.664M21 21l-1.5-1.5m-5.485-1.242L12 17.25 4.5 21V8.742m.164-4.078a2.15 2.15 0 0 1 1.743-1.342 48.507 48.507 0 0 1 11.186 0c1.1.128 1.907 1.077 1.907 2.185V19.5M4.664 4.664 19.5 19.5" />
 												</svg>
 											</button>
 										) :
@@ -242,13 +243,37 @@ export default function SeriePage() : JSX.Element {
 							cursor: "w-full bg-primary",
 						}}>
 							<Tab key="season1" title="Season 1">
-							{/*	TODO - Add episode cards here  */}
+								<div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-3 xl:grid-cols-7 gap-x-2 gap-y-3">
+									<EpisodeCard />
+									<EpisodeCard />
+									<EpisodeCard />
+									<EpisodeCard />
+									<EpisodeCard />
+									<EpisodeCard />
+									<EpisodeCard />
+									<EpisodeCard />
+								</div>
 							</Tab>
 							<Tab key="season2" title="Season 2">
-								{/*	TODO - Add episode cards here  */}
+								<div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-3 xl:grid-cols-7 gap-x-2 gap-y-3">
+									<EpisodeCard />
+									<EpisodeCard />
+									<EpisodeCard />
+									<EpisodeCard />
+									<EpisodeCard />
+									<EpisodeCard />
+									<EpisodeCard />
+								</div>
 							</Tab>
 							<Tab key="season3" title="Season 3">
-								{/*	TODO - Add episode cards here  */}
+								<div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-3 xl:grid-cols-7 gap-x-2 gap-y-3">
+									<EpisodeCard />
+									<EpisodeCard />
+									<EpisodeCard />
+									<EpisodeCard />
+									<EpisodeCard />
+									<EpisodeCard />
+								</div>
 							</Tab>
 						</Tabs>
 					</div>

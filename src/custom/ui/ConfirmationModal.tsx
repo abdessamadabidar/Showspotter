@@ -2,7 +2,7 @@ import {Button, Modal, ModalBody, ModalContent, ModalFooter, ModalHeader} from "
 import {useDispatch, useSelector} from "react-redux";
 import {RootState} from "../../state/store.ts";
 import {toggleOpening} from "../../state/modal/confirmationModalSlice.ts";
-import WarningTriangleSolidIcon from "./icons/warning-triangle-solid-icon.tsx";
+
 
 
 interface Props {
@@ -17,15 +17,15 @@ export default function ConfirmationModal({title, message}: Props) : JSX.Element
 	return (
 		<>
 			<Modal
-				backdrop="opaque"
+				backdrop="blur"
 				isOpen={isOpen}
 				radius="lg"
 				size={"sm"}
 				placement="top"
 				classNames={{
 					body: "py-6",
-					backdrop: "bg-[#292f46]/50 backdrop-opacity-40",
-					base: "border-[#292f46] bg-[#19172c] dark:bg-[#19172c] text-[#a8b0d3]",
+					backdrop: "bg-transparent/50 ",
+					base: "border-[#292f46] bg-slate-900 dark:bg-[#19172c] text-[#a8b0d3]",
 					header: "border-b-[1px] border-[#292f46]",
 					footer: "border-t-[1px] border-[#292f46]",
 					closeButton: "hover:bg-white/5 active:bg-white/10 hidden",
@@ -33,8 +33,11 @@ export default function ConfirmationModal({title, message}: Props) : JSX.Element
 			>
 				<ModalContent>
 					<>
-						<ModalHeader className="flex flex-nowrap gap-2 text-red-500  items-center">
-							<WarningTriangleSolidIcon width={16} height={16} color={"#ef4444"} />
+						<ModalHeader className="flex flex-nowrap gap-2 text-red-500 uppercase  items-center">
+							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 22" strokeWidth={1.5} stroke="currentColor" className="size-5">
+								<path strokeLinecap="round" strokeLinejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126ZM12 15.75h.007v.008H12v-.008Z" />
+							</svg>
+
 							{title}
 						</ModalHeader>
 						<ModalBody>

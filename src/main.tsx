@@ -16,9 +16,9 @@ import {Provider} from "react-redux";
 import MoviePage from "./pages/MoviePage.tsx";
 import ProfilePage from "./pages/ProfilePage.tsx";
 import HomePage from "./pages/HomePage.tsx";
-import ListsPage from "./pages/ListsPage.tsx";
 import ContactPage from "./pages/ContactPage.tsx";
 import SeriePage from "./pages/SeriePage.tsx";
+
 
 
 const router  = createBrowserRouter([
@@ -63,11 +63,6 @@ const router  = createBrowserRouter([
         errorElement: <PageNotFound />
     },
     {
-        path: '/profile/lists',
-        element: <ListsPage />,
-        errorElement: <PageNotFound />
-    },
-    {
         path: '/contact',
         element: <ContactPage />,
         errorElement: <PageNotFound />
@@ -77,6 +72,7 @@ const router  = createBrowserRouter([
         element: <SeriePage />,
         errorElement: <PageNotFound />
     },
+
 ]);
 
 

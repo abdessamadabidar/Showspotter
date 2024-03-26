@@ -7,7 +7,6 @@ import {
 } from './EmblaCarouselArrowButtons'
 import Autoplay from 'embla-carousel-autoplay'
 import useEmblaCarousel from 'embla-carousel-react'
-import "./embla.css"
 import ShowCard from "../../custom/ui/ShowCard.tsx";
 
 type PropType = {
@@ -31,36 +30,22 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
 	return (
 		<section className="max-w-[50rem] min-w-full flex flex-col">
 
-			<div className="embla__viewport" ref={emblaRef}>
-				<div className="embla__container">
-					<div className="embla__slide" >
-						<ShowCard link={link} />
-					</div>
-					<div className="embla__slide" >
-						<ShowCard link={link} />
-					</div>
-					<div className="embla__slide" >
-						<ShowCard link={link} />
-					</div>
-					<div className="embla__slide" >
-						<ShowCard link={link} />
-					</div>
-					<div className="embla__slide" >
-						<ShowCard link={link} />
-					</div>
-					<div className="embla__slide" >
-						<ShowCard link={link} />
-					</div>
-					<div className="embla__slide" >
-						<ShowCard link={link} />
-					</div>
-					<div className="embla__slide" >
-						<ShowCard link={link} />
-					</div>
+			<div className="w-full overflow-hidden" ref={emblaRef}>
+				<div className="flex gap-x-2">
+					<ShowCard link={link} />
+					<ShowCard link={link} />
+					<ShowCard link={link} />
+					<ShowCard link={link} />
+					<ShowCard link={link} />
+					<ShowCard link={link} />
+					<ShowCard link={link} />
+					<ShowCard link={link} />
+					<ShowCard link={link} />
+					<ShowCard link={link} />
 				</div>
 			</div>
 
-			<div className="flex flex-nowrap items-center gapx-3 self-end">
+			<div className="flex flex-nowrap items-center gap-x-3 self-end mt-5">
 				<PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
 				<NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
 			</div>

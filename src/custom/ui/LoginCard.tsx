@@ -17,7 +17,7 @@ export function LoginCard() : JSX.Element {
 	return (
 		<div className="w-full relative max-w-md">
 			<div className="absolute  h-full w-full bg-gradient-to-r from-blue-500 to-teal-500 transform scale-[0.80] bg-red-500 rounded-full blur-3xl" />
-			<div className="w-full  relative shadow-xl bg-gray-900 border border-gray-800  px-4 py-6 h-full overflow-hidden rounded-2xl flex flex-col justify-end items-start">
+			<div className="w-full  relative shadow-xl bg-slate-900 border border-gray-800  px-4 py-6 h-full overflow-hidden rounded-2xl flex flex-col justify-end items-start">
 				<div className="h-5 w-5 rounded-full border flex items-center justify-center mb-4 border-gray-500">
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
@@ -40,7 +40,19 @@ export function LoginCard() : JSX.Element {
 				</h1>
 
 				<form className="w-full mb-6">
-					<Input type="email" variant="faded" label="Email" size="sm" className="mb-4" classNames={LoginInputCustomStyle}
+					<Input
+						type="email"
+						variant={"faded"}
+						label="Email"
+						className="mb-4"
+						classNames={LoginInputCustomStyle}
+						endContent={
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#9CA3AF" className="size-5 relative -top-2">
+								<path d="M1.5 8.67v8.58a3 3 0 0 0 3 3h15a3 3 0 0 0 3-3V8.67l-8.928 5.493a3 3 0 0 1-3.144 0L1.5 8.67Z" />
+								<path d="M22.5 6.908V6.75a3 3 0 0 0-3-3h-15a3 3 0 0 0-3 3v.158l9.714 5.978a1.5 1.5 0 0 0 1.572 0L22.5 6.908Z" />
+							</svg>
+
+						}
 					/>
 					<Input
 						label="Password"

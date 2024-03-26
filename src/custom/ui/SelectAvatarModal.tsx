@@ -28,11 +28,11 @@ export default function SelectAvatarModal() {
 				isOpen={isOpen}
 				radius="lg"
 				size={"5xl"}
-				placement="bottom"
+				placement="top-center"
 				classNames={{
 					body: "py-6",
 					backdrop: "bg-[#292f46]/50 backdrop-opacity-40",
-					base: "border-[#292f46] bg-[#19172c] dark:bg-[#19172c] text-[#a8b0d3]",
+					base: "border-[#292f46] bg-slate-900 dark:bg-[#19172c] text-[#a8b0d3]",
 					header: "border-b-[1px] border-[#292f46]",
 					footer: "border-t-[1px] border-[#292f46]",
 					closeButton: "hover:bg-white/5 active:bg-white/10 hidden",
@@ -88,8 +88,8 @@ export default function SelectAvatarModal() {
 							<Button color="default" radius="full" size="sm" variant="flat" onPress={() => {
 								console.log('do some actions')
 							}}
-							className="font-medium uppercase bg-white/80 text-black/80 hover:bg-white hover:text-black">
-								save
+							className="font-medium uppercase bg-gradient-to-r from-pink-500 to-violet-600 text-white ">
+								set
 							</Button>
 						</ModalFooter>
 					</>

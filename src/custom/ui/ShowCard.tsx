@@ -7,7 +7,7 @@ interface Props {
 export default function ShowCard({link}: Props) {
 	return (
 		<div key={1}>
-			<Card className="bg-gray-800 sm:w-[115px] sm:h-[171px] md:w-[178px] md:h-[267px] lg:w-[314px] lg:h-[475px] xl:w-[150px] xl:h-[225px] hover:scale-105 transition-all duration-500 mb-1.5" isPressable>
+			<Card className="bg-gray-800 w-[115px] h-[171px] md:w-[178px] md:h-[267px] lg:w-[314px] lg:h-[475px] xl:w-[150px] xl:h-[225px] hover:scale-105 transition-all duration-500 mb-1.5" isPressable>
 				<Image
 					removeWrapper
 					alt="Card background"

@@ -12,8 +12,8 @@ export default function ContactPage() : JSX.Element {
 	const InputCustomStyle = {
 		label: ["text-smooth-gray"],
 		inputWrapper: [
-			"bg-gray-800",
-			"border-primary-gray",
+			"bg-slate-900",
+			"border-gray-700",
 			"border-1",
 		],
 	}
@@ -58,8 +58,8 @@ export default function ContactPage() : JSX.Element {
 						classNames={{
 							label: ["text-smooth-gray"],
 							inputWrapper: [
-								"bg-gray-800",
-								"border-primary-gray",
+								"bg-slate-900",
+								"border-gray-700",
 								"border-1"
 							],
 							input: "resize-y min-h-[40px]"
