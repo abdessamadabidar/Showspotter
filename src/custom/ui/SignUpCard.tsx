@@ -26,7 +26,6 @@ export default function SignUpCard() : JSX.Element {
 	}
 
 	const SelectCustomStyle = {
-		value: ["text-white"],
 		label: ["text-smooth-gray"],
 		selectorIcon: ["text-smooth-gray"],
 		trigger: ["bg-gray-800 border-primary-gray border-1"],

@@ -1,4 +1,4 @@
-import NavbarRender from "../layouts/NavbarRender.tsx";
+import Header from "../layouts/Header.tsx";
 import {
 	BreadcrumbItem,
 	Breadcrumbs,
@@ -63,7 +63,7 @@ export default function SeriePage() : JSX.Element {
 	const link : string = "https://c4.wallpaperflare.com/wallpaper/462/216/45/movies-dark-wednesday-addams-wednesday-tv-series-movie-poster-hd-wallpaper-preview.jpg";
 	return (
 		<>
-			<NavbarRender />
+			<Header />
 			<section className="pt-6">
 				<div className="min-h-screen px-4 lg:w-9/12 mx-auto">
 					<div className={"mb-6"}>

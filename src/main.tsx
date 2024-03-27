@@ -18,6 +18,7 @@ import ProfilePage from "./pages/ProfilePage.tsx";
 import HomePage from "./pages/HomePage.tsx";
 import ContactPage from "./pages/ContactPage.tsx";
 import SeriePage from "./pages/SeriePage.tsx";
+import ByCountryPage from "./pages/ByCountryPage.tsx";
 
 
 
@@ -70,6 +71,11 @@ const router  = createBrowserRouter([
     {
         path: '/serie',
         element: <SeriePage />,
+        errorElement: <PageNotFound />
+    },
+    {
+        path: '/country/united-state',
+        element: <ByCountryPage />,
         errorElement: <PageNotFound />
     },
 

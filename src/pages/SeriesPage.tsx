@@ -1,6 +1,6 @@
 import {BreadcrumbItem, Breadcrumbs, Card, CardFooter, Chip, Image, Pagination} from "@nextui-org/react";
 import {movies} from "../custom/data/movies.ts";
-import NavbarRender from "../layouts/NavbarRender.tsx";
+import Header from "../layouts/Header.tsx";
 import {useSelector} from "react-redux";
 import {RootState} from "../state/store.ts";
 import LoadingProgress from "../custom/ui/LoadingProgress.tsx";
@@ -18,7 +18,7 @@ export default function SeriesPage() : JSX.Element {
 	}
 	return (
 		<>
-			<NavbarRender/>
+			<Header/>
 			<section>
 				<div className={"w-full px-5 xl:w-[85%] 2xl:w-[75%] mx-auto mb-5"}>
 					<div className={"my-16"}>
@@ -38,7 +38,7 @@ export default function SeriesPage() : JSX.Element {
 							className="flex flex-col items-center justify-center md:flex-row md:justify-between gap-5 pb-5 border-b-0.1 border-b-smooth-gray">
 							<h2 className="font-semibold text-3xl">Series</h2>
 							<div
-								className=" border-1 bg-gray-800 border-smooth-gray ps-2 pe-3 flex flex-nowrap items-center rounded-lg ">
+								className=" border-1 bg-slate-900 border-gray-700 ps-2 pe-3 flex flex-nowrap items-center rounded-lg ">
 								<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.2} stroke="currentColor" className="w-6 h-6 text-smooth-gray">
 									<path strokeLinecap="round" strokeLinejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
 								</svg>

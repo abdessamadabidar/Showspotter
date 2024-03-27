@@ -1,4 +1,4 @@
-import NavbarRender from "../layouts/NavbarRender.tsx";
+import Header from "../layouts/Header.tsx";
 import {toggleSelectAvatarModalOpening} from "../state/modal/selectAvatarModalSlice.ts";
 import {useDispatch} from "react-redux";
 import {Button, Card, CardFooter, Chip, Image, Input, Tab, Tabs} from "@nextui-org/react";
@@ -23,7 +23,7 @@ export default function ProfilePage()  {
 	return (
 		<>
 			<section className="">
-				<NavbarRender/>
+				<Header/>
 				<div className="mt-10 px-4 md:px-5 lg:w-8/12 mx-auto">
 					<div className="flex flex-col md:flex-row flex-wrap">
 						<div className="mb-5 flex flex-wrap flex-row gap-x-5 justify-center items-center">
@@ -135,8 +135,8 @@ export default function ProfilePage()  {
 									<div className="lg:p-4">
 										<div className="gap-x-3 gap-y-5 grid grid-cols-3 md:grid-cols-4 lg:grid-cols-3 xl:grid-cols-6 ">
 											{movies.map((link: string, index: number) => (
-													<div>
-														<Card className="bg-gray-800 w-[115px] h-[171px] md:w-[178px] md:h-[267px] lg:w-[314px] lg:h-[475px] xl:w-[150px] xl:h-[225px] hover:scale-105 transition-all duration-500 mb-1.5" key={index} isPressable>
+													<div key={index}>
+														<Card className="bg-gray-800 w-[115px] h-[171px] md:w-[178px] md:h-[267px] lg:w-[314px] lg:h-[475px] xl:w-[150px] xl:h-[225px] hover:scale-105 transition-all duration-500 mb-1.5"  isPressable>
 															<Image
 																removeWrapper
 																alt="Card background"
@@ -183,8 +183,8 @@ export default function ProfilePage()  {
 									<div className="lg:p-4">
 										<div className="gap-x-3 gap-y-5 grid grid-cols-3 md:grid-cols-4 lg:grid-cols-3 xl:grid-cols-6">
 											{movies.map((link: string, index: number) => (
-													<div>
-														<Card className="bg-gray-800 w-[115px] h-[171px] md:w-[178px] md:h-[267px] lg:w-[314px] lg:h-[475px] xl:w-[150px] xl:h-[225px] hover:scale-105 transition-all duration-500 mb-1.5" key={index} isPressable>
+													<div key={index}>
+														<Card className="bg-gray-800 w-[115px] h-[171px] md:w-[178px] md:h-[267px] lg:w-[314px] lg:h-[475px] xl:w-[150px] xl:h-[225px] hover:scale-105 transition-all duration-500 mb-1.5" isPressable>
 															<Image
 																removeWrapper
 																alt="Card background"
@@ -232,8 +232,8 @@ export default function ProfilePage()  {
 									<div className="lg:p-4">
 										<div className="gap-x-3 gap-y-5 grid grid-cols-3 md:grid-cols-4 lg:grid-cols-3 xl:grid-cols-6">
 											{movies.map((link: string, index: number) => (
-													<div>
-														<Card className="bg-gray-800 w-[115px] h-[171px] md:w-[178px] md:h-[267px] lg:w-[314px] lg:h-[475px] xl:w-[150px] xl:h-[225px] hover:scale-105 transition-all duration-500 mb-1.5" key={index} isPressable>
+													<div key={index}>
+														<Card className="bg-gray-800 w-[115px] h-[171px] md:w-[178px] md:h-[267px] lg:w-[314px] lg:h-[475px] xl:w-[150px] xl:h-[225px] hover:scale-105 transition-all duration-500 mb-1.5" isPressable>
 															<Image
 																removeWrapper
 																alt="Card background"

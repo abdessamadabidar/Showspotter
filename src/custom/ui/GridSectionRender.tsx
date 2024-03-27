@@ -27,8 +27,8 @@ export  default function GridSectionRender({name, links}: Props) : JSX.Element {
 			<div className={`gap-x-2 gap-y-5 grid grid-cols-3 md:grid-cols-4 lg:grid-cols-3 xl:grid-cols-7 ${appIsLoading && "animate-pulse"} `}>
 				{links.map((link : string, index: number) =>
 					(
-						<div>
-							<Card className="bg-gray-800 sm:w-[115px] sm:h-[171px] md:w-[178px] md:h-[267px] lg:w-[314px] lg:h-[475px] xl:w-[150px] xl:h-[225px] hover:scale-105 transition-all duration-500 mb-1.5" key={index} isPressable>
+						<div key={index}>
+							<Card className="bg-gray-800 sm:w-[115px] sm:h-[171px] md:w-[178px] md:h-[267px] lg:w-[314px] lg:h-[475px] xl:w-[150px] xl:h-[225px] hover:scale-105 transition-all duration-500 mb-1.5"  isPressable>
 								<Image
 									removeWrapper
 									alt="Card background"

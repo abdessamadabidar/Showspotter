@@ -7,7 +7,7 @@ import LoadingProgress from "../custom/ui/LoadingProgress.tsx";
 
 
 
-export default function AnimePage() : JSX.Element {
+export default function ByCountryPage() : JSX.Element {
 	const  appIsLoading: boolean = useSelector((state: RootState) => state.applicationLoading.isLoading);
 
 	if (appIsLoading) {
@@ -30,13 +30,14 @@ export default function AnimePage() : JSX.Element {
 						}}
 						>
 							<BreadcrumbItem>Home</BreadcrumbItem>
-							<BreadcrumbItem>Anime</BreadcrumbItem>
+							<BreadcrumbItem>Country</BreadcrumbItem>
+							<BreadcrumbItem>United State</BreadcrumbItem>
 						</Breadcrumbs>
 					</div>
 					<div className="flex flex-col gap-y-8 ">
 						<div
 							className="flex flex-col items-center justify-center md:flex-row md:justify-between gap-5 pb-5 border-b-0.1 border-b-smooth-gray">
-							<h2 className="font-semibold text-3xl">Anime</h2>
+							<h2 className="font-semibold text-3xl">United State</h2>
 							<div
 								className=" border-1 bg-slate-900 border-gray-700 ps-2 pe-3 flex flex-nowrap items-center rounded-lg">
 								<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.2} stroke="currentColor" className="w-6 h-6 text-smooth-gray">
