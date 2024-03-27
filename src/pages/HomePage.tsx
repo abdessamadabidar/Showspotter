@@ -43,7 +43,7 @@ export default function HomePage() : JSX.Element {
 		<>
 			<Header />
 			<section className="mb-20">
-				<div className={"mx-auto overflow-hidden px-5 mt-24 lg:px-8 "}>
+				<div className={"mx-auto overflow-hidden px-5 mt-14 lg:px-8 "}>
 					<div className={"flex flex-col items-center gap-y-5 md:w-2/3 mx-auto"}>
 						<motion.div
 							initial={{y: 20 }} // Initial state

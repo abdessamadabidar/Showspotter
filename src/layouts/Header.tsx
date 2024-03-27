@@ -36,10 +36,10 @@ export default function Header() {
 						aria-label={isMenuOpen ? "Close menu" : "Open menu"}
 						className="sm:hidden text-primary-gray"
 					/>
-					<Link to={"/"}>
+					<Link className="" to={"/"}>
 						<NavbarBrand>
 							<AcmeLogo />
-							<p className="font-bold text-inherit uppercase">showspotter</p>
+							<p className="font-bold text-inherit uppercase hidden md:block">showspotter</p>
 						</NavbarBrand>
 					</Link>
 				</NavbarContent>

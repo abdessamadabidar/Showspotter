@@ -14,7 +14,7 @@ import SortDropDown from "../custom/ui/SortDropDown.tsx";
 
 
 
-export default function ByCountryPage() : JSX.Element {
+export default function ByCategoryPage() : JSX.Element {
 	const  appIsLoading: boolean = useSelector((state: RootState) => state.applicationLoading.isLoading);
 
 	if (appIsLoading) {
@@ -37,14 +37,14 @@ export default function ByCountryPage() : JSX.Element {
 						}}
 						>
 							<BreadcrumbItem>Home</BreadcrumbItem>
-							<BreadcrumbItem>Country</BreadcrumbItem>
-							<BreadcrumbItem>United State</BreadcrumbItem>
+							<BreadcrumbItem>Category</BreadcrumbItem>
+							<BreadcrumbItem>Action</BreadcrumbItem>
 						</Breadcrumbs>
 					</div>
 					<div className="flex flex-col gap-y-8 ">
 						<div
 							className="flex flex-col items-center justify-center md:flex-row md:justify-between gap-5 pb-5 border-b-0.1 border-b-smooth-gray">
-							<h2 className="font-semibold text-3xl">United State</h2>
+							<h2 className="font-semibold text-3xl">Action</h2>
 							<div className="flex items-center gap-x-2">
 								<SortDropDown />
 								<FilterDropDown />
